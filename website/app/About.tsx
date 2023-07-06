@@ -11,7 +11,7 @@ const About = () => {
         width={200}
         height={200}
       />
-      <h1 className="display-5 fw-bold">Hi, I'm Tim</h1>
+      <h1 className="display-5 fw-bold">Hi, I&apos;m Tim</h1>
       <div className="col-lg-6 mx-auto">
         <p className="lead mb-2">Developer, student, and opinion-haver</p>
         <p className="lead mb-4">
