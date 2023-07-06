@@ -19,13 +19,13 @@ const About = () => {
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
           <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
-            What I've Done
+            What I&apos;ve Done
           </button>
           <button
             type="button"
             className="btn btn-outline-secondary btn-lg px-4"
           >
-            What I've Read
+            What I&apos;ve Read
           </button>
         </div>
       </div>
