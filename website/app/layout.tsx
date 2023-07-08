@@ -1,14 +1,15 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/custom.scss";
 import { Roboto_Flex } from "next/font/google";
+import NavBar from "./NavBar";
 
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Tim Tran",
-  description: "Tim Tran's Website",
+  title: "Tim's Corner",
+  description: "Where I share my thoughts and ideas",
 };
 
 export default function RootLayout({
@@ -18,7 +19,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${robotoFlex.className} container bg-light`}>
+      <body className={`${robotoFlex.className} container`}>
+        <NavBar></NavBar>
         {children}
       </body>
     </html>
