@@ -2,10 +2,10 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg text-bg-light">
+    <nav className="navbar navbar-expand-lg">
       <div className="container-fluid">
-        <Link href="#" className="navbar-brand mb-0 h1">
-          Tacascer&apos;s corner
+        <Link href="#" className="navbar-brand mb-0 fs-3 fw-bold">
+          Tim&apos;s Corner
         </Link>
       </div>
     </nav>

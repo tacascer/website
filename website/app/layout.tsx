@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
+import "../styles/custom.scss";
 import { Roboto_Flex } from "next/font/google";
 
 const robotoFlex = Roboto_Flex({
