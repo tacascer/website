@@ -1,3 +1,3 @@
 "use client";
 
-export { Container, Button } from "react-bootstrap";
+export { Container, Button, Card } from "react-bootstrap";
