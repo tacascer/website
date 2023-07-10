@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "components/bootstrap";
 
 const About = () => {
   return (
@@ -17,12 +18,12 @@ const About = () => {
           I read books, build things, and test in production
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button" className="btn btn-primary btn-lg px-4 gap-3">
+          <Button variant="primary" size="lg" className="px-4">
             What I&apos;ve Done
-          </button>
-          <button type="button" className="btn btn-secondary btn-lg px-4">
+          </Button>
+          <Button variant="secondary" size="lg" className="px-4">
             What I&apos;ve Read
-          </button>
+          </Button>
         </div>
       </div>
     </main>
