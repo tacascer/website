@@ -19,12 +19,13 @@ const TechCard = ({ name, image, altText, description }: Tech) => {
         quality={100}
         className="align-self-center rounded-bottom-5 border-bottom border-primary-subtle border-5"
         style={{
+          // Hard coding dimensions here because Card component doesn't respect className
           width: `${logoWidth}px`,
           height: `${logoHeight}px`,
         }}
       ></Card.Img>
-      <Card.Body className="bg-secondary rounded-pill">
-        <Card.Title className="text-center">{name}</Card.Title>
+      <Card.Body className="bg-secondary rounded-pill text-center">
+        <Card.Title>{name}</Card.Title>
         <Card.Text className="col-md-8 mx-auto d-none d-md-block">
           {description}
         </Card.Text>
