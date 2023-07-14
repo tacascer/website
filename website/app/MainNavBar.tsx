@@ -1,6 +1,6 @@
 "use client";
 
-import { Container, Nav, NavItem, Navbar } from "react-bootstrap";
+import { Navbar, Container, Nav } from "@/components/bootstrap";
 
 const MainNavBar = () => {
   return (

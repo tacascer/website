@@ -1,14 +1,13 @@
-"use client";
-import { Card } from "components/bootstrap";
-import { Tech } from "@/app/Tech";
+import { Button, Card } from "components/bootstrap";
+import { Tech } from "./TechCarousel";
 import Image from "next/image";
 
 const logoWidth = 200;
 const logoHeight = 200;
 
-const TechCard = ({ name, image, altText, description }: Tech) => {
+const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
   return (
-    <Card className="border-0 gap-4 py-4">
+    <Card className="border-0 gap-4">
       <Card.Img
         variant="top"
         src={image}
@@ -24,11 +23,20 @@ const TechCard = ({ name, image, altText, description }: Tech) => {
           height: `${logoHeight}px`,
         }}
       ></Card.Img>
-      <Card.Body className="text-bg-secondary bg-secondary-subtle rounded-5 text-center">
+      <Card.Body className="border border-primary border-1 text-bg-secondary bg-secondary-subtle rounded-3 text-center">
         <Card.Title as="h3">{name}</Card.Title>
-        <div className="mx-auto d-none d-md-block col-lg-8 ">
+        <div className="mx-auto d-none d-md-block col-lg-7">
           {cardTextFromDescription(description)}
         </div>
+        <Button
+          variant="outline-primary"
+          size="lg"
+          href={homePage}
+          target="_blank"
+          className="mt-3 rounded-pill"
+        >
+          Try It Yourself!
+        </Button>
       </Card.Body>
     </Card>
   );
