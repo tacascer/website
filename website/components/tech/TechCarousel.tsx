@@ -6,7 +6,14 @@ import { TechList } from "@/app/Tech";
 
 const TechCarousel = ({ techs }: TechList) => {
   return (
-    <Carousel slide controls={false} interval={2000} wrap touch>
+    <Carousel
+      id="tech-carousel"
+      slide
+      controls={false}
+      interval={2000}
+      wrap
+      touch
+    >
       {techs.map((tech, index) => {
         return (
           <Carousel.Item key={index}>

@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/custom.scss";
 import { Roboto_Flex } from "next/font/google";
-import NavBar from "./NavBar";
+import MainNavBar from "./MainNavBar";
 
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${robotoFlex.className} container`}>
-        <NavBar></NavBar>
+        <MainNavBar></MainNavBar>
         {children}
       </body>
     </html>
