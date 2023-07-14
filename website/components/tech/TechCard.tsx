@@ -16,7 +16,7 @@ const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
         height={logoHeight}
         as={Image}
         quality={100}
-        className="align-self-center shadow-lg rounded-5 p-3"
+        className="align-self-center shadow rounded-5 p-3"
         style={{
           // Hard coding dimensions here because Card component doesn't respect className
           width: `${logoWidth}px`,
@@ -27,16 +27,16 @@ const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
         <Card.Title as="h3">{name}</Card.Title>
         <div className="mx-auto d-none d-md-block col-lg-7">
           {cardTextFromDescription(description)}
+          <Button
+            variant="outline-primary"
+            size="lg"
+            href={homePage}
+            target="_blank"
+            className="rounded-pill"
+          >
+            Try It Yourself!
+          </Button>
         </div>
-        <Button
-          variant="outline-primary"
-          size="lg"
-          href={homePage}
-          target="_blank"
-          className="mt-3 rounded-pill"
-        >
-          Try It Yourself!
-        </Button>
       </Card.Body>
     </Card>
   );

@@ -11,8 +11,8 @@ const MainNavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
-          <Nav justify variant="underline" defaultActiveKey="#tech-carousel">
-            <Nav.Link href="#tech-carousel" className="fs-4 fw-lighter">
+          <Nav justify variant="underline" defaultActiveKey="#techs">
+            <Nav.Link href="#techs" className="fs-4 fw-lighter">
               Techs
             </Nav.Link>
           </Nav>

@@ -64,7 +64,6 @@ const techs: Tech[] = [
 const TechCarousel = () => {
   return (
     <Carousel
-      id="tech-carousel"
       slide
       controls={false}
       interval={2000}
