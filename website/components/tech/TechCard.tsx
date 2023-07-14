@@ -24,7 +24,7 @@ const TechCard = ({ name, image, altText, description }: Tech) => {
           height: `${logoHeight}px`,
         }}
       ></Card.Img>
-      <Card.Body className="text-bg-secondary rounded-5 text-center">
+      <Card.Body className="text-bg-secondary bg-secondary-subtle rounded-5 text-center">
         <Card.Title as="h3">{name}</Card.Title>
         <div className="mx-auto d-none d-md-block col-lg-8 ">
           {cardTextFromDescription(description)}
