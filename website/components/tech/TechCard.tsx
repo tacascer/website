@@ -8,7 +8,7 @@ const logoHeight = 200;
 
 const TechCard = ({ name, image, altText, description }: Tech) => {
   return (
-    <Card className="border-0 gap-3">
+    <Card className="border-0 gap-4 py-4">
       <Card.Img
         variant="top"
         src={image}
@@ -17,16 +17,16 @@ const TechCard = ({ name, image, altText, description }: Tech) => {
         height={logoHeight}
         as={Image}
         quality={100}
-        className="align-self-center rounded-bottom-5 border-bottom border-primary-subtle border-5"
+        className="align-self-center shadow-lg rounded-5 p-3"
         style={{
           // Hard coding dimensions here because Card component doesn't respect className
           width: `${logoWidth}px`,
           height: `${logoHeight}px`,
         }}
       ></Card.Img>
-      <Card.Body className="bg-secondary rounded-5 text-center">
+      <Card.Body className="text-bg-secondary rounded-5 text-center">
         <Card.Title as="h3">{name}</Card.Title>
-        <div className="mx-auto d-none d-md-block col-lg-8">
+        <div className="mx-auto d-none d-md-block col-lg-8 ">
           {cardTextFromDescription(description)}
         </div>
       </Card.Body>

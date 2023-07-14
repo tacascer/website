@@ -9,7 +9,7 @@ const TechCarousel = ({ techs }: TechList) => {
     <Carousel slide controls={false} interval={2000} wrap touch>
       {techs.map((tech, index) => {
         return (
-          <Carousel.Item key={index} className="mb-4">
+          <Carousel.Item key={index}>
             <TechCard {...tech}></TechCard>
           </Carousel.Item>
         );

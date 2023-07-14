@@ -18,10 +18,18 @@ const About = () => {
           I read books, build things, and test in production
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <Button variant="primary" size="lg" className="px-4">
+          <Button
+            variant="primary"
+            size="lg"
+            className="px-4 shadow rounded-pill"
+          >
             What I&apos;ve Done
           </Button>
-          <Button variant="secondary" size="lg" className="px-4">
+          <Button
+            variant="secondary"
+            size="lg"
+            className="px-4 shadow rounded-pill"
+          >
             What I&apos;ve Read
           </Button>
         </div>
