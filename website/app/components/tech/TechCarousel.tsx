@@ -1,6 +1,6 @@
 "use client";
 
-import { Carousel } from "components/bootstrap";
+import { Carousel } from "@/app/components/bootstrap";
 import TechCard from "./TechCard";
 export interface Tech {
   name: string;

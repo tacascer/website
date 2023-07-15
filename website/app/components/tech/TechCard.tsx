@@ -1,9 +1,9 @@
-import { Button, Card } from "components/bootstrap";
+import { Button, Card } from "@/app/components/bootstrap";
 import { Tech } from "./TechCarousel";
 import Image from "next/image";
 
-const logoWidth = 200;
-const logoHeight = 200;
+const LOGO_WIDTH = 200;
+const LOGO_HEIGHT = 200;
 
 const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
   return (
@@ -12,15 +12,15 @@ const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
         variant="top"
         src={image}
         alt={altText}
-        width={logoWidth}
-        height={logoHeight}
+        width={LOGO_WIDTH}
+        height={LOGO_HEIGHT}
         as={Image}
         quality={100}
         className="align-self-center shadow rounded-5 p-3"
         style={{
           // Hard coding dimensions here because Card component doesn't respect className
-          width: `${logoWidth}px`,
-          height: `${logoHeight}px`,
+          width: `${LOGO_WIDTH}px`,
+          height: `${LOGO_HEIGHT}px`,
         }}
       ></Card.Img>
       <Card.Body>

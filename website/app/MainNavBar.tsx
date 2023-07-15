@@ -1,6 +1,6 @@
 "use client";
 
-import { Navbar, Container, Nav } from "@/components/bootstrap";
+import { Navbar, Container, Nav } from "@/app/components/bootstrap";
 import Link from "next/link";
 
 interface NavigationItem {
@@ -8,7 +8,7 @@ interface NavigationItem {
   href: string;
 }
 
-const navigationItems: NavigationItem[] = [
+const NAV_ITEMS: NavigationItem[] = [
   {
     name: "About",
     href: "/",
@@ -19,7 +19,7 @@ const navigationItems: NavigationItem[] = [
   },
 ];
 
-const navItems = (items: NavigationItem[]) =>
+const renderNavItems = (items: NavigationItem[]) =>
   items.map((item, index) => {
     return (
       <Nav.Item key={index}>
@@ -45,7 +45,7 @@ const MainNavBar = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           <Nav justify variant="underline">
-            {navItems(navigationItems)}
+            {renderNavItems(NAV_ITEMS)}
           </Nav>
         </Navbar.Collapse>
       </Container>

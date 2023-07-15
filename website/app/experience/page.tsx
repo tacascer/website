@@ -1,4 +1,4 @@
-import Current from "@/components/experience/Current";
+import Current from "@/app/components/experience/Current";
 
 export default function Experience() {
   return <Current></Current>;

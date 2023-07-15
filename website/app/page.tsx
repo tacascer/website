@@ -1,5 +1,5 @@
-import About from "../components/about/About";
-import Tech from "../components/tech/Tech";
+import About from "./components/about/About";
+import Tech from "./components/tech/Tech";
 
 export default function Home() {
   return (

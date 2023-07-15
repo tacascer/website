@@ -1,5 +1,5 @@
-import TechCarousel from "@/components/tech/TechCarousel";
-import TechHeader from "@/components/tech/TechHeader";
+import TechCarousel from "@/app/components/tech/TechCarousel";
+import TechHeader from "@/app/components/tech/TechHeader";
 
 const Tech = () => {
   return (
