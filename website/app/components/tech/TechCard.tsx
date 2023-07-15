@@ -33,7 +33,7 @@ const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
             variant="outline-primary"
             href={homePage}
             target="_blank"
-            className="rounded-pill shadow d-grid col-5 mx-auto"
+            className="rounded-pill shadow d-grid col-5 mx-auto stretched-link"
           >
             Try It Yourself!
           </Button>
