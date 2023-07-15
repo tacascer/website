@@ -1,5 +1,12 @@
 import Image from "next/image";
-import { Button } from "components/bootstrap";
+import AboutButton from "./AboutButton";
+import { ReactNode } from "react";
+
+export interface ButtonProps {
+  variant: string;
+  href: string;
+  children: ReactNode;
+}
 
 const About = () => {
   return (
@@ -18,20 +25,12 @@ const About = () => {
           I read books, build things, and test in production
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <Button
-            variant="primary"
-            size="lg"
-            className="px-4 shadow rounded-pill"
-          >
+          <AboutButton variant="primary" href="/experience">
             What I&apos;ve Done
-          </Button>
-          <Button
-            variant="secondary"
-            size="lg"
-            className="px-4 shadow rounded-pill"
-          >
+          </AboutButton>
+          <AboutButton variant="secondary" href="/tech">
             What I&apos;ve Read
-          </Button>
+          </AboutButton>
         </div>
       </div>
     </main>

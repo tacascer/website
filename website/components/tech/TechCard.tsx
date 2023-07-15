@@ -7,7 +7,7 @@ const logoHeight = 200;
 
 const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
   return (
-    <Card className="border-0 gap-4">
+    <Card className="border-0 gap-2">
       <Card.Img
         variant="top"
         src={image}
@@ -23,7 +23,7 @@ const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
           height: `${logoHeight}px`,
         }}
       ></Card.Img>
-      <Card.Body className="border border-primary border-1 text-bg-secondary bg-secondary-subtle rounded-3 text-center">
+      <Card.Body className="text-center">
         <Card.Title as="h3">{name}</Card.Title>
         <div className="mx-auto d-none d-md-block col-lg-7">
           {cardTextFromDescription(description)}
@@ -32,7 +32,7 @@ const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
             size="lg"
             href={homePage}
             target="_blank"
-            className="rounded-pill"
+            className="rounded-pill shadow"
           >
             Try It Yourself!
           </Button>
