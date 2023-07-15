@@ -23,16 +23,17 @@ const TechCard = ({ name, image, altText, description, homePage }: Tech) => {
           height: `${logoHeight}px`,
         }}
       ></Card.Img>
-      <Card.Body className="text-center">
-        <Card.Title as="h3">{name}</Card.Title>
+      <Card.Body>
+        <Card.Title as="h3" className="text-center">
+          {name}
+        </Card.Title>
         <div className="mx-auto d-none d-md-block col-lg-7">
           {cardTextFromDescription(description)}
           <Button
             variant="outline-primary"
-            size="lg"
             href={homePage}
             target="_blank"
-            className="rounded-pill shadow"
+            className="rounded-pill shadow d-grid col-5 mx-auto"
           >
             Try It Yourself!
           </Button>
