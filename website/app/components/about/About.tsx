@@ -10,7 +10,10 @@ export interface ButtonProps {
 
 const About = () => {
   return (
-    <main className="px-5 py-5 my-5 text-center text-bg-primary bg-opacity-75 bg-gradient rounded-5">
+    <main
+      id="about"
+      className="px-5 py-5 my-5 text-center text-bg-primary bg-opacity-75 bg-gradient rounded-5"
+    >
       <Image
         className="d-block mx-auto mb-4 rounded-circle"
         src="/profile.jpeg"

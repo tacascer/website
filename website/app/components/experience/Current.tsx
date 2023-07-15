@@ -13,7 +13,7 @@ const CURRENT_EMPLOYER: CardProps = {
 
 const CurrentExperience = () => {
   return (
-    <div className="my-5">
+    <div id="experience" className="my-5">
       <h1 className="text-center my-4">To Build Things At</h1>
       <Card {...CURRENT_EMPLOYER}></Card>
     </div>
