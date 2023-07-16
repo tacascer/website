@@ -6,7 +6,7 @@ const PREVIOUS_EMPLOYERS = [{}];
 const Past = () => {
   return (
     <Section>
-      <Header>Deployed Disasters At</Header>;
+      <Header>Wrote Spaghetti Code At</Header>;
     </Section>
   );
 };

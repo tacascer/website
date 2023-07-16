@@ -26,7 +26,7 @@ const EMPLOYER_CARD: CardProps = employerToCard(
 const CurrentExperience = () => {
   return (
     <Section id="experience">
-      <Header>Releasing Mayhem At</Header>
+      <Header>Deploying Bugs At</Header>
       <Card {...EMPLOYER_CARD}></Card>
     </Section>
   );
