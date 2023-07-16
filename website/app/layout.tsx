@@ -9,7 +9,10 @@ const robotoFlex = Roboto_Flex({
 
 export const metadata = {
   title: "Tim's Corner",
-  description: "Where I share my thoughts and ideas",
+  description: `Tim Tran (@tacascer) is a software engineer based in NYC.
+   He is passionate about building software that is scalable, maintainable, and easy to use.
+   This is his corner of the internet.
+   `,
 };
 
 export default function RootLayout({

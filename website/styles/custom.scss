@@ -3,3 +3,7 @@ $secondary: #e0e1dd;
 $body-bg: #fafafa;
 $carousel-control-color: $primary;
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+html {
+  scroll-padding-top: 5em;
+}
