@@ -37,7 +37,7 @@ const techs: CardProps[] = [
     image: "/kotlin.svg",
     altText: "The Kotlin Logo",
     description: `
-        Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference.
+        Kotlin is a cross-platform, statically typed, general-purpose programming language.
         It is designed to interoperate fully with Java, bringing modern language features to remove the verbosity and ceremony of Java.
     `,
     button: {
