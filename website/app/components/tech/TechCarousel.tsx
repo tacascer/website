@@ -7,7 +7,7 @@ const CALL_TO_ACTION = "Try It Out!";
 
 const techs: CardProps[] = [
   {
-    name: "Next.js",
+    title: "Next.js",
     image: "/nextjs.svg",
     altText: "The Next.js Logo",
     description: `
@@ -20,7 +20,7 @@ const techs: CardProps[] = [
     },
   },
   {
-    name: "Spring",
+    title: "Spring",
     image: "/spring.svg",
     altText: "The Spring Logo",
     description: `
@@ -33,7 +33,7 @@ const techs: CardProps[] = [
     },
   },
   {
-    name: "Kotlin",
+    title: "Kotlin",
     image: "/kotlin.svg",
     altText: "The Kotlin Logo",
     description: `
@@ -46,7 +46,7 @@ const techs: CardProps[] = [
     },
   },
   {
-    name: "Gradle",
+    title: "Gradle",
     image: "/gradle.svg",
     altText: "The Gradle Logo",
     // Generate two sentences about Gradle
@@ -60,7 +60,7 @@ const techs: CardProps[] = [
     },
   },
   {
-    name: "Apache Flink",
+    title: "Apache Flink",
     image: "/flink.png",
     altText: "The Flink Logo",
     description: `
@@ -73,7 +73,7 @@ const techs: CardProps[] = [
     },
   },
   {
-    name: "Apache Kafka",
+    title: "Apache Kafka",
     image: "/kafka.svg",
     altText: "The Kafka Logo",
     description: `
@@ -99,7 +99,7 @@ const TechCarousel = () => {
     >
       {techs.map((tech, index) => {
         return (
-          <Carousel.Item className="pt-4" key={index}>
+          <Carousel.Item key={index}>
             <Card {...tech}></Card>
           </Carousel.Item>
         );

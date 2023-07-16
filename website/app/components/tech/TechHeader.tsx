@@ -1,5 +1,7 @@
+import Header from "../common/Header";
+
 const TechHeader = () => {
-  return <h1 className="h1 text-center">Currently Using ...</h1>;
+  return <Header>Currently Using ...</Header>;
 };
 
 export default TechHeader;

@@ -7,14 +7,14 @@ const LOGO_WIDTH = 200;
 const LOGO_HEIGHT = 200;
 
 const CardComponent = ({
-  name,
+  title,
   image,
   altText,
   description,
   button,
 }: CardProps) => {
   return (
-    <Card className="border-0 gap-2">
+    <Card className="border-0 gap-2 pt-2">
       <Card.Img
         variant="top"
         src={image}
@@ -31,16 +31,16 @@ const CardComponent = ({
         }}
       ></Card.Img>
       <Card.Body>
-        <Card.Title as="h3" className="text-center text-primary">
-          {name}
+        <Card.Title as="h3" className="text-center text-primary ">
+          {title}
         </Card.Title>
-        <div className="mx-auto d-none d-md-block col-lg-7">
+        <div className="mx-auto  col-lg-7 ">
           {cardTextFromDescription(description)}
           <Button
             variant="outline-primary"
             href={button.href}
             target="_blank"
-            className="rounded-pill d-grid col-4 mx-auto stretched-link"
+            className="rounded-pill d-grid col-md-4 mx-auto stretched-link"
           >
             {button.text}
           </Button>
@@ -66,7 +66,7 @@ export interface ImageMetadata {
 }
 
 export interface CardProps extends ImageMetadata {
-  name?: string;
+  title?: string;
   description: string;
   button: ButtonProps;
 }
