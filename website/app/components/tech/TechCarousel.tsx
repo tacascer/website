@@ -12,7 +12,7 @@ const techs: CardProps[] = [
     altText: "The Next.js Logo",
     description: `
         Next.js is an open-source React framework used for building static and server-side rendered applications.
-        It provides features such as automatic code splitting, static file serving, and client-side routing. 
+        It provides features such as static site generation, server-side rendering, automatic code splitting, and client-side routing.
     `,
     button: {
       text: CALL_TO_ACTION,
@@ -100,7 +100,9 @@ const TechCarousel = () => {
       {techs.map((tech, index) => {
         return (
           <Carousel.Item key={index}>
-            <Card {...tech}></Card>
+            <div className="col-lg-8 mx-auto">
+              <Card {...tech}></Card>
+            </div>
           </Carousel.Item>
         );
       })}

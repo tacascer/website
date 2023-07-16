@@ -10,7 +10,7 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
     name: "TradeWeb",
     description: `
     Tradeweb offers electronic over-the-counter (OTC) marketplaces for trading fixed income products, ETFs, and derivatives.
-    The company offers institutional, wholesale and retail market participants unparalleled liquidity, advanced technology and a broad range of data solutions that deliver better price discovery, order execution and trade workflows. 
+    The company offers market participants unparalleled liquidity and a broad range of data solutions. 
     `,
     link: "https://www.tradeweb.com/",
     image: "/tradeweb.svg",
@@ -19,7 +19,8 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
   {
     name: "Amazon Robotics",
     description: `
-  Amazon Robotics is a subsidiary of Amazon that automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands.
+    Amazon Robotics is a subsidiary of Amazon that designs, manufactures, and operates robots used in fulfillment centers.
+     The company's robots are used to move products around warehouses and sort them for shipping. 
   `,
     link: "https://www.amazon.jobs/en/teams/amazon-robotics",
     image: "/amazon-robotics.svg",
@@ -31,7 +32,7 @@ const Past = () => {
   return (
     <Section>
       <Header>Wrote &#127837; Code At</Header>
-      <Row className="justify-content-center">
+      <Row>
         {PREVIOUS_EMPLOYERS.map((employer, index) => (
           <Col key={index}>
             <EmployerCard {...employer}></EmployerCard>

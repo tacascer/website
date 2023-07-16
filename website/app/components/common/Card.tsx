@@ -14,7 +14,7 @@ const CardComponent = ({
   button,
 }: CardProps) => {
   return (
-    <Card className="border-0 gap-2 pt-2 col-lg-7 mx-auto">
+    <Card className={`border-0 gap-2 pt-2`}>
       <Card.Img
         variant="top"
         src={image}
@@ -67,6 +67,7 @@ export interface ImageMetadata {
 
 export interface CardProps extends ImageMetadata {
   title?: string;
+  className?: string;
   description: string;
   button: ButtonProps;
 }

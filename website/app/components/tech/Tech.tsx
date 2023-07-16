@@ -4,10 +4,10 @@ import Section from "../common/Section";
 
 const Tech = () => {
   return (
-    <Section>
+    <>
       <TechHeader></TechHeader>
       <TechCarousel></TechCarousel>
-    </Section>
+    </>
   );
 };
 
