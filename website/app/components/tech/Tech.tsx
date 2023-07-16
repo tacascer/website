@@ -1,12 +1,13 @@
 import TechCarousel from "@/app/components/tech/TechCarousel";
 import TechHeader from "@/app/components/tech/TechHeader";
+import Section from "../common/Section";
 
 const Tech = () => {
   return (
-    <div className="mx-auto my-5">
+    <Section>
       <TechHeader></TechHeader>
       <TechCarousel></TechCarousel>
-    </div>
+    </Section>
   );
 };
 

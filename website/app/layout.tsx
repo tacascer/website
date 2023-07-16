@@ -19,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${robotoFlex.className} container`}>
+      <body
+        className={`${robotoFlex.className} container`}
+        data-bs-spy="scroll"
+        data-bs-target="#navbar"
+      >
         <NavBar></NavBar>
         {children}
       </body>

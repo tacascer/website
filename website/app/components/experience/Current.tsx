@@ -1,4 +1,6 @@
 import Card, { CardProps } from "../common/Card";
+import Header from "../common/Header";
+import Section from "../common/Section";
 
 const CURRENT_EMPLOYER: CardProps = {
   image: "/bloomberg.svg",
@@ -13,10 +15,10 @@ const CURRENT_EMPLOYER: CardProps = {
 
 const CurrentExperience = () => {
   return (
-    <div id="experience" className="my-5">
-      <h1 className="text-center my-4">To Build Things At</h1>
+    <Section id="experience">
+      <Header>To Build Things At</Header>
       <Card {...CURRENT_EMPLOYER}></Card>
-    </div>
+    </Section>
   );
 };
 

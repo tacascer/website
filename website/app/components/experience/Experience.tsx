@@ -1,7 +1,13 @@
 import Current from "./Current";
+import Past from "./Past";
 
 const Experience = () => {
-  return <Current></Current>;
+  return (
+    <>
+      <Current></Current>
+      <Past></Past>
+    </>
+  );
 };
 
 export default Experience;

@@ -31,7 +31,7 @@ const renderNavItems = (items: NavigationItem[]) =>
 
 const MainNavBar = () => {
   return (
-    <Navbar expand="lg" sticky="top" className="bg-light">
+    <Navbar id="navbar" expand="lg" sticky="top" className="bg-light">
       <Container fluid>
         <Navbar.Brand className="fs-2 fw-bold" href="#">
           Tim&apos;s Corner
