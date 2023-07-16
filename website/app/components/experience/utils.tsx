@@ -12,7 +12,6 @@ export function employerToCard(
   callToAction: string
 ): CardProps {
   return {
-    name: employer.name,
     description: employer.description,
     image: image.image,
     altText: image.altText,
