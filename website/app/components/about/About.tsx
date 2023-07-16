@@ -28,10 +28,10 @@ const About = () => {
           I read books, build things, and test in production
         </p>
         <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <AboutButton variant="primary" href="/experience">
+          <AboutButton variant="primary" href="#experience">
             What I&apos;ve Done
           </AboutButton>
-          <AboutButton variant="secondary" href="/tech">
+          <AboutButton variant="secondary" href="#">
             What I&apos;ve Read
           </AboutButton>
         </div>

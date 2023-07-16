@@ -3,7 +3,7 @@ import TechHeader from "@/app/components/tech/TechHeader";
 
 const Tech = () => {
   return (
-    <div className="col-lg-10 mx-auto my-5">
+    <div className="mx-auto my-5">
       <TechHeader></TechHeader>
       <TechCarousel></TechCarousel>
     </div>

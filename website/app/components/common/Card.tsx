@@ -31,7 +31,7 @@ const CardComponent = ({
         }}
       ></Card.Img>
       <Card.Body>
-        <Card.Title as="h3" className="text-center">
+        <Card.Title as="h3" className="text-center text-primary">
           {name}
         </Card.Title>
         <div className="mx-auto d-none d-md-block col-lg-7">
@@ -40,7 +40,7 @@ const CardComponent = ({
             variant="outline-primary"
             href={button.href}
             target="_blank"
-            className="rounded-pill shadow d-grid col-5 mx-auto stretched-link"
+            className="rounded-pill shadow d-grid col-4 mx-auto stretched-link"
           >
             {button.text}
           </Button>
@@ -51,18 +51,14 @@ const CardComponent = ({
 };
 
 const cardTextFromDescription = (description: string) => {
-  // Split description into sentences and map each sentence to a Card.Text component. A sentence is defined as a substring of description that ends with a period and is followed by a space and a capital letter.
-  // The regex (?<=\.\s) is a positive lookbehind that matches a period followed by a space, but does not include the period and space in the match.
-  // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions#positive_lookbehind_assertions
   return description
     .trim()
     .split("\n")
-    .map((sentence, index) => <Card.Text key={index}>{sentence}</Card.Text>);
-  // The above code is equivalent to:
-
-  // return description.split(/(?<=\.\s)/).map((sentence, index) => {
-  //   return <Card.Text key={index}>{sentence}</Card.Text>;
-  // });
+    .map((sentence, index) => (
+      <Card.Text key={index} className="text-body-secondary">
+        {sentence}
+      </Card.Text>
+    ));
 };
 
 export interface CardProps {

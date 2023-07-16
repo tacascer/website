@@ -8,8 +8,10 @@ const techs: CardProps[] = [
     name: "Next.js",
     image: "/nextjs.svg",
     altText: "The Next.js Logo",
-    description: `Next.js is a React-based open-source framework used for building server-side rendered (SSR) web applications. 
-        It provides features such as automatic code splitting, server-side rendering, and static site generation.`,
+    description: `
+        Next.js is an open-source React framework used for building static and server-side rendered applications.
+        It provides features such as automatic code splitting, static file serving, and client-side routing. 
+    `,
     button: {
       text: "Try It Yourself!",
       href: "https://nextjs.org/",
@@ -30,8 +32,10 @@ const techs: CardProps[] = [
     name: "Kotlin",
     image: "/kotlin.svg",
     altText: "The Kotlin Logo",
-    description: `Kotlin is a statically typed programming language that runs on the Java Virtual Machine (JVM) and can also be compiled to JavaScript source code.
-       It is designed to be concise, expressive, and safe, and is often used for developing Android applications.`,
+    description: `
+        Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference.
+        It is designed to interoperate fully with Java, and the JVM version of its standard library depends on the Java Class Library.
+    `,
     button: {
       text: "Try It Yourself!",
       href: "https://kotlinlang.org/",
@@ -41,8 +45,11 @@ const techs: CardProps[] = [
     name: "Gradle",
     image: "/gradle.svg",
     altText: "The Gradle Logo",
-    description: `Gradle is an open-source build automation tool used for building, testing, and deploying software projects.
-       It is designed to be flexible, fast, and easy to use, and is often used for building Java-based applications.`,
+    // Generate two sentences about Gradle
+    description: `
+        Gradle is an open-source build automation tool used for building, testing, and deploying software.
+        It is designed to be declarative, extensible, and fast, and is often used for building Java-based applications.
+    `,
     button: {
       text: "Try It Yourself!",
       href: "https://gradle.org/",
@@ -52,8 +59,10 @@ const techs: CardProps[] = [
     name: "Apache Flink",
     image: "/flink.png",
     altText: "The Flink Logo",
-    description: `Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams.
-       Flink has been designed to run in all common cluster environments, perform computations at in-memory speed and at any scale.`,
+    description: `
+        Apache Flink is an open-source stream processing framework used for building distributed, high-performance data pipelines.
+        It is designed to be fault-tolerant, scalable, and stateful.
+    `,
     button: {
       text: "Try It Yourself!",
       href: "https://flink.apache.org/",
@@ -63,8 +72,10 @@ const techs: CardProps[] = [
     name: "Apache Kafka",
     image: "/kafka.svg",
     altText: "The Kafka Logo",
-    description: `Apache Kafka is an open-source distributed event streaming platform used for building real-time data pipelines and streaming applications.
-       It is designed to be fast, scalable, and durable, and is often used for processing large volumes of data in real-time.`,
+    description: `
+        Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, data integration, and mission-critical applications.
+        It is horizontally scalable, fault-tolerant, and extremely fast.
+    `,
     button: {
       text: "Try It Yourself!",
       href: "https://kafka.apache.org/",
@@ -76,12 +87,11 @@ const TechCarousel = () => {
   return (
     <Carousel
       slide
-      controls={false}
+      controls={true}
       interval={2000}
       wrap
       touch
       indicators={false}
-      className="px-5"
     >
       {techs.map((tech, index) => {
         return (

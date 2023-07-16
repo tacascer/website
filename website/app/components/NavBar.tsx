@@ -38,7 +38,7 @@ const MainNavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
-          <Nav justify variant="underline">
+          <Nav fill variant="underline" defaultActiveKey={0}>
             {renderNavItems(NAV_ITEMS)}
           </Nav>
         </Navbar.Collapse>
