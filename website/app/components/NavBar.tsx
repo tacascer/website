@@ -1,6 +1,6 @@
 "use client";
 
-import { Navbar, Container, Nav } from "@/app/components/bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 
 interface NavigationItem {
   name: string;

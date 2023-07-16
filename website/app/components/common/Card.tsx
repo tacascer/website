@@ -60,11 +60,13 @@ const cardTextFromDescription = (description: string) => {
       </Card.Text>
     ));
 };
-
-export interface CardProps {
-  name?: string;
+export interface ImageMetadata {
   image: string;
   altText: string;
+}
+
+export interface CardProps extends ImageMetadata {
+  name?: string;
   description: string;
   button: ButtonProps;
 }

@@ -1,7 +1,9 @@
 "use client";
 
-import { Carousel } from "@/app/components/bootstrap";
-import Card, { CardProps } from "@/app/components/common/Card";
+import { Carousel } from "react-bootstrap";
+import Card, { CardProps } from "@/components/common/Card";
+
+const CALL_TO_ACTION = "Try It Out!";
 
 const techs: CardProps[] = [
   {
@@ -13,7 +15,7 @@ const techs: CardProps[] = [
         It provides features such as automatic code splitting, static file serving, and client-side routing. 
     `,
     button: {
-      text: "Try It Yourself!",
+      text: CALL_TO_ACTION,
       href: "https://nextjs.org/",
     },
   },
@@ -21,10 +23,12 @@ const techs: CardProps[] = [
     name: "Spring",
     image: "/spring.svg",
     altText: "The Spring Logo",
-    description: `Spring is an open-source application framework used for building Java-based enterprise applications.
-       It provides features such as dependency injection, aspect-oriented programming, and support for various data access technologies.`,
+    description: `
+      Spring is an open-source application framework used for building Java-based enterprise applications.
+      Along with Spring Boot, it offers all the tools and configurations required to build enterprise applications in a quick and easy way.
+    `,
     button: {
-      text: "Try It Yourself!",
+      text: CALL_TO_ACTION,
       href: "https://spring.io/",
     },
   },
@@ -34,10 +38,10 @@ const techs: CardProps[] = [
     altText: "The Kotlin Logo",
     description: `
         Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference.
-        It is designed to interoperate fully with Java, and the JVM version of its standard library depends on the Java Class Library.
+        It is designed to interoperate fully with Java, bringing modern language features to remove the verbosity and ceremony of Java.
     `,
     button: {
-      text: "Try It Yourself!",
+      text: CALL_TO_ACTION,
       href: "https://kotlinlang.org/",
     },
   },
@@ -48,10 +52,10 @@ const techs: CardProps[] = [
     // Generate two sentences about Gradle
     description: `
         Gradle is an open-source build automation tool used for building, testing, and deploying software.
-        It is designed to be declarative, extensible, and fast, and is often used for building Java-based applications.
+        Its expressive and declarative DSL allows developers to write build scripts that are maintainable, scalable, and easy to understand.
     `,
     button: {
-      text: "Try It Yourself!",
+      text: CALL_TO_ACTION,
       href: "https://gradle.org/",
     },
   },
@@ -61,10 +65,10 @@ const techs: CardProps[] = [
     altText: "The Flink Logo",
     description: `
         Apache Flink is an open-source stream processing framework used for building distributed, high-performance data pipelines.
-        It is designed to be fault-tolerant, scalable, and stateful.
+        It provides features such as exactly-once semantics, stateful computations, and fault tolerance.
     `,
     button: {
-      text: "Try It Yourself!",
+      text: CALL_TO_ACTION,
       href: "https://flink.apache.org/",
     },
   },
@@ -77,7 +81,7 @@ const techs: CardProps[] = [
         It is horizontally scalable, fault-tolerant, and extremely fast.
     `,
     button: {
-      text: "Try It Yourself!",
+      text: CALL_TO_ACTION,
       href: "https://kafka.apache.org/",
     },
   },
