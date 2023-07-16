@@ -1,4 +1,4 @@
-import Card, { CardProps, ImageMetadata } from "../common/Card";
+import Card, { CardProps, ImageMetadata } from "../components/Card";
 
 export interface EmployerCardProps extends ImageMetadata, Employer {}
 

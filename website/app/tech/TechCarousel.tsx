@@ -1,7 +1,7 @@
 "use client";
 
 import { Carousel } from "react-bootstrap";
-import Card, { CardProps } from "@/components/common/Card";
+import Card, { CardProps } from "@/components/Card";
 
 const CALL_TO_ACTION = "Try It Out!";
 

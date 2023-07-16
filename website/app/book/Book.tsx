@@ -1,5 +1,5 @@
-import Header from "@/components/common/Header";
-import Section from "@/components/common/Section";
+import Header from "@/components/Header";
+import Section from "@/components/Section";
 
 const Book = () => {
   return (

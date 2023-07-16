@@ -1,4 +1,4 @@
-import Header from "../common/Header";
+import Header from "@/components/Header";
 
 const TechHeader = () => {
   return <Header>Currently Using ...</Header>;

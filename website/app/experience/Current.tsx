@@ -1,5 +1,5 @@
-import Header from "../common/Header";
-import Section from "../common/Section";
+import Header from "@/components/Header";
+import Section from "@/components/Section";
 import EmployerCard, { EmployerCardProps } from "./EmployerCard";
 
 const CURRENT_EMPLOYER: EmployerCardProps = {

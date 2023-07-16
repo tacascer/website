@@ -1,7 +1,7 @@
 import Book from "./book/Book";
-import About from "./components/about/About";
-import Experience from "./components/experience/Experience";
-import Tech from "./components/tech/Tech";
+import About from "./about/About";
+import Experience from "./experience/Experience";
+import Tech from "./tech/Tech";
 
 export default function Home() {
   return (
