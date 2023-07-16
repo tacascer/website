@@ -16,13 +16,22 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
     image: "/tradeweb.svg",
     altText: "The Tradeweb Logo",
   },
+  {
+    name: "Amazon Robotics",
+    description: `
+  Amazon Robotics is a subsidiary of Amazon that automates fulfillment center operations using various methods of robotic technology including autonomous mobile robots, sophisticated control software, language perception, power management, computer vision, depth sensing, machine learning, object recognition, and semantic understanding of commands.
+  `,
+    link: "https://www.amazon.jobs/en/teams/amazon-robotics",
+    image: "/amazon-robotics.svg",
+    altText: "The Amazon Robotics Logo",
+  },
 ];
 
 const Past = () => {
   return (
     <Section>
       <Header>Wrote &#127837; Code At</Header>
-      <Row md="auto">
+      <Row className="justify-content-center">
         {PREVIOUS_EMPLOYERS.map((employer, index) => (
           <Col key={index}>
             <EmployerCard {...employer}></EmployerCard>

@@ -14,7 +14,7 @@ const CardComponent = ({
   button,
 }: CardProps) => {
   return (
-    <Card className="border-0 gap-2 pt-2">
+    <Card className="border-0 gap-2 pt-2 col-lg-7 mx-auto">
       <Card.Img
         variant="top"
         src={image}
@@ -23,28 +23,28 @@ const CardComponent = ({
         height={LOGO_HEIGHT}
         as={Image}
         quality={100}
-        className="align-self-center shadow rounded-5 p-3"
+        className="align-self-center shadow rounded-5 p-3 bg-light"
+        fill={false}
         style={{
           // Hard coding dimensions here because Card component doesn't respect className
           width: `${LOGO_WIDTH}px`,
           height: `${LOGO_HEIGHT}px`,
+          objectFit: "contain",
         }}
       ></Card.Img>
       <Card.Body>
         <Card.Title as="h3" className="text-center text-primary ">
           {title}
         </Card.Title>
-        <div className="mx-auto  col-lg-7 ">
-          {cardTextFromDescription(description)}
-          <Button
-            variant="outline-primary"
-            href={button.href}
-            target="_blank"
-            className="rounded-pill d-grid col-md-4 mx-auto stretched-link"
-          >
-            {button.text}
-          </Button>
-        </div>
+        {cardTextFromDescription(description)}
+        <Button
+          variant="outline-primary"
+          href={button.href}
+          target="_blank"
+          className="rounded-pill d-grid col-md-4 mx-auto stretched-link"
+        >
+          {button.text}
+        </Button>
       </Card.Body>
     </Card>
   );
