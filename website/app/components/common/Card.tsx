@@ -40,7 +40,7 @@ const CardComponent = ({
             variant="outline-primary"
             href={button.href}
             target="_blank"
-            className="rounded-pill shadow d-grid col-4 mx-auto stretched-link"
+            className="rounded-pill d-grid col-4 mx-auto stretched-link"
           >
             {button.text}
           </Button>
