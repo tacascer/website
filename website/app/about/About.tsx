@@ -1,11 +1,4 @@
 import Image from "next/image";
-import { ReactNode } from "react";
-
-export interface ButtonProps {
-  variant: string;
-  href: string;
-  children: ReactNode;
-}
 
 const About = () => {
   return (
