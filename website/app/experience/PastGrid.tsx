@@ -3,6 +3,8 @@
 import { Row, Col } from "react-bootstrap";
 import EmployerCard, { EmployerCardProps } from "./EmployerCard";
 
+const LOGO_HEIGHT = 100;
+const LOGO_WIDTH = 250;
 const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
   {
     name: "TradeWeb",
@@ -12,8 +14,8 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
     `,
     link: "https://www.tradeweb.com/",
     image: "/tradeweb.svg",
-    height: 150,
-    width: 150,
+    height: LOGO_HEIGHT,
+    width: LOGO_WIDTH,
     altText: "The Tradeweb Logo",
   },
   {
@@ -24,8 +26,8 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
   `,
     link: "https://www.amazon.jobs/en/teams/amazon-robotics",
     image: "/amazon-robotics.svg",
-    height: 150,
-    width: 150,
+    height: LOGO_HEIGHT,
+    width: LOGO_WIDTH,
     altText: "The Amazon Robotics Logo",
   },
 ];
