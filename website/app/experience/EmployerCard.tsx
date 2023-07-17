@@ -15,6 +15,8 @@ function employerToCard(employer: EmployerWithImage): CardProps {
     description: employer.description,
     image: employer.image,
     altText: employer.altText,
+    height: employer.height,
+    width: employer.width,
     button: {
       text: CALL_TO_ACTION,
       href: employer.link,

@@ -12,6 +12,8 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
     `,
     link: "https://www.tradeweb.com/",
     image: "/tradeweb.svg",
+    height: 150,
+    width: 150,
     altText: "The Tradeweb Logo",
   },
   {
@@ -22,6 +24,8 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
   `,
     link: "https://www.amazon.jobs/en/teams/amazon-robotics",
     image: "/amazon-robotics.svg",
+    height: 150,
+    width: 150,
     altText: "The Amazon Robotics Logo",
   },
 ];

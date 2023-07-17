@@ -6,9 +6,19 @@ import Image from "next/image";
 const LOGO_WIDTH = 200;
 const LOGO_HEIGHT = 200;
 
+function widthOrDefault(width: number | undefined) {
+  return width ?? LOGO_WIDTH;
+}
+
+function heightOrDefault(height: number | undefined) {
+  return height ?? LOGO_HEIGHT;
+}
+
 const CardComponent = ({
   title,
   image,
+  height,
+  width,
   altText,
   description,
   button,
@@ -19,21 +29,21 @@ const CardComponent = ({
         variant="top"
         src={image}
         alt={altText}
-        width={LOGO_WIDTH}
-        height={LOGO_HEIGHT}
+        width={widthOrDefault(width)}
+        height={heightOrDefault(height)}
         as={Image}
         quality={100}
         className="align-self-center shadow rounded-5 p-3 bg-light"
         fill={false}
         style={{
           // Hard coding dimensions here because Card component doesn't respect className
-          width: `${LOGO_WIDTH}px`,
-          height: `${LOGO_HEIGHT}px`,
+          width: `${widthOrDefault(width)}px`,
+          height: `${heightOrDefault(height)}px`,
           objectFit: "contain",
         }}
       ></Card.Img>
       <Card.Body>
-        <Card.Title as="h3" className="text-center text-primary ">
+        <Card.Title as="h2" className="text-center text-primary ">
           {title}
         </Card.Title>
         {cardTextFromDescription(description)}
@@ -63,6 +73,8 @@ const cardTextFromDescription = (description: string) => {
 export interface ImageMetadata {
   image: string;
   altText: string;
+  height?: number;
+  width?: number;
 }
 
 export interface CardProps extends ImageMetadata {
