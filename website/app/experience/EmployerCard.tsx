@@ -1,6 +1,9 @@
 import Card, { CardProps, ImageMetadata } from "../components/Card";
 
-export interface EmployerCardProps extends ImageMetadata, Employer {}
+export type EmployerCardProps = {
+  employer: Employer;
+  image: ImageMetadata;
+};
 
 type Employer = {
   name: string;
@@ -8,18 +11,16 @@ type Employer = {
   link: string;
 };
 
-type EmployerWithImage = Employer & ImageMetadata;
-
-function employerToCard(employer: EmployerWithImage): CardProps {
+function employerToCard({
+  employer: { description, link },
+  image,
+}: EmployerCardProps): CardProps {
   return {
-    description: employer.description,
-    image: employer.image,
-    altText: employer.altText,
-    height: employer.height,
-    width: employer.width,
+    description: description,
+    image: image,
     button: {
       text: CALL_TO_ACTION,
-      href: employer.link,
+      href: link,
     },
   };
 }

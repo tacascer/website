@@ -8,8 +8,10 @@ const CALL_TO_ACTION = "Try It Out!";
 const techs: CardProps[] = [
   {
     title: "Next.js",
-    image: "/nextjs.svg",
-    altText: "The Next.js Logo",
+    image: {
+      image: "/nextjs.svg",
+      altText: "The Next.js Logo",
+    },
     description: `
         Next.js is an open-source React framework used for building static and server-side rendered applications.
         It provides features such as static site generation, server-side rendering, automatic code splitting, and client-side routing.
@@ -21,8 +23,10 @@ const techs: CardProps[] = [
   },
   {
     title: "Spring",
-    image: "/spring.svg",
-    altText: "The Spring Logo",
+    image: {
+      image: "/spring.svg",
+      altText: "The Spring Logo",
+    },
     description: `
       Spring is an open-source application framework used for building Java-based enterprise applications.
       Along with Spring Boot, it offers all the tools and configurations required to build enterprise applications in a quick and easy way.
@@ -34,8 +38,10 @@ const techs: CardProps[] = [
   },
   {
     title: "Kotlin",
-    image: "/kotlin.svg",
-    altText: "The Kotlin Logo",
+    image: {
+      image: "/kotlin.svg",
+      altText: "The Kotlin Logo",
+    },
     description: `
         Kotlin is a cross-platform, statically typed, general-purpose programming language.
         It is designed to interoperate fully with Java, bringing modern language features to remove the verbosity and ceremony of Java.
@@ -47,8 +53,10 @@ const techs: CardProps[] = [
   },
   {
     title: "Gradle",
-    image: "/gradle.svg",
-    altText: "The Gradle Logo",
+    image: {
+      image: "/gradle.svg",
+      altText: "The Gradle Logo",
+    },
     // Generate two sentences about Gradle
     description: `
         Gradle is an open-source build automation tool used for building, testing, and deploying software.
@@ -61,8 +69,10 @@ const techs: CardProps[] = [
   },
   {
     title: "Apache Flink",
-    image: "/flink.png",
-    altText: "The Flink Logo",
+    image: {
+      image: "/flink.png",
+      altText: "The Flink Logo",
+    },
     description: `
         Apache Flink is an open-source stream processing framework used for building distributed, high-performance data pipelines.
         It provides features such as exactly-once semantics, stateful computations, and fault tolerance.
@@ -74,8 +84,10 @@ const techs: CardProps[] = [
   },
   {
     title: "Apache Kafka",
-    image: "/kafka.svg",
-    altText: "The Kafka Logo",
+    image: {
+      image: "/kafka.svg",
+      altText: "The Kafka Logo",
+    },
     description: `
         Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, data integration, and mission-critical applications.
         It is horizontally scalable, fault-tolerant, and extremely fast.

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import AboutButton from "./AboutButton";
 import { ReactNode } from "react";
 
 export interface ButtonProps {
@@ -27,14 +26,6 @@ const About = () => {
         <p className="lead mb-4">
           I read books, build things, and test in production
         </p>
-        <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <AboutButton variant="primary" href="#experience">
-            What I&apos;ve Done
-          </AboutButton>
-          <AboutButton variant="secondary" href="#">
-            What I&apos;ve Read
-          </AboutButton>
-        </div>
       </div>
     </main>
   );

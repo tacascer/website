@@ -6,20 +6,9 @@ import Image from "next/image";
 const LOGO_WIDTH = 200;
 const LOGO_HEIGHT = 200;
 
-function widthOrDefault(width: number | undefined) {
-  return width ?? LOGO_WIDTH;
-}
-
-function heightOrDefault(height: number | undefined) {
-  return height ?? LOGO_HEIGHT;
-}
-
 const CardComponent = ({
   title,
-  image,
-  height,
-  width,
-  altText,
+  image: { image, altText, height = LOGO_HEIGHT, width = LOGO_WIDTH },
   description,
   button,
 }: CardProps) => {
@@ -29,16 +18,16 @@ const CardComponent = ({
         variant="top"
         src={image}
         alt={altText}
-        width={widthOrDefault(width)}
-        height={heightOrDefault(height)}
+        width={width}
+        height={height}
         as={Image}
         quality={100}
         className="align-self-center shadow rounded-5 p-3 bg-light"
         fill={false}
         style={{
           // Hard coding dimensions here because Card component doesn't respect className
-          width: `${widthOrDefault(width)}px`,
-          height: `${heightOrDefault(height)}px`,
+          width: `${width}px`,
+          height: `${height}px`,
           objectFit: "contain",
         }}
       ></Card.Img>
@@ -70,23 +59,23 @@ const cardTextFromDescription = (description: string) => {
       </Card.Text>
     ));
 };
-export interface ImageMetadata {
+export type ImageMetadata = {
   image: string;
   altText: string;
   height?: number;
   width?: number;
-}
+};
 
-export interface CardProps extends ImageMetadata {
+export type CardProps = {
   title?: string;
-  className?: string;
   description: string;
+  image: ImageMetadata;
   button: ButtonProps;
-}
+};
 
-interface ButtonProps {
+type ButtonProps = {
   href: string;
   text: string;
-}
+};
 
 export default CardComponent;

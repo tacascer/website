@@ -2,10 +2,10 @@
 
 import { Navbar, Container, Nav } from "react-bootstrap";
 
-interface NavigationItem {
+type NavigationItem = {
   name: string;
   href: string;
-}
+};
 
 const NAV_ITEMS: NavigationItem[] = [
   {
