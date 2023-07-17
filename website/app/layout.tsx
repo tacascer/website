@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../styles/custom.scss";
 import { Roboto_Flex } from "next/font/google";
 import NavBar from "./components/NavBar";
+import { Analytics } from "@vercel/analytics/react";
 
 const robotoFlex = Roboto_Flex({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className={`${robotoFlex.className} container`}>
         <NavBar></NavBar>
         {children}
+        <Analytics></Analytics>
       </body>
     </html>
   );
