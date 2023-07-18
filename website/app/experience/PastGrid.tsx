@@ -21,6 +21,9 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
       width: LOGO_WIDTH,
       altText: "The Tradeweb Logo",
     },
+    button: {
+      size: "col-md-6",
+    },
   },
   {
     employer: {
@@ -36,6 +39,9 @@ const PREVIOUS_EMPLOYERS: EmployerCardProps[] = [
       height: LOGO_HEIGHT,
       width: LOGO_WIDTH,
       altText: "The Amazon Robotics Logo",
+    },
+    button: {
+      size: "col-md-6",
     },
   },
 ];

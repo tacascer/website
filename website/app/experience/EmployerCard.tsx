@@ -3,6 +3,9 @@ import Card, { CardProps, ImageMetadata } from "../components/Card";
 export type EmployerCardProps = {
   employer: Employer;
   image: ImageMetadata;
+  button?: {
+    size: string;
+  };
 };
 
 type Employer = {
@@ -14,6 +17,7 @@ type Employer = {
 function employerToCard({
   employer: { description, link },
   image,
+  button,
 }: EmployerCardProps): CardProps {
   return {
     description: description,
@@ -21,6 +25,7 @@ function employerToCard({
     button: {
       text: CALL_TO_ACTION,
       href: link,
+      size: button?.size,
     },
   };
 }
