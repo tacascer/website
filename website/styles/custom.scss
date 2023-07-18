@@ -7,3 +7,12 @@ $carousel-control-color: $primary;
 html {
   scroll-padding-top: 5em;
 }
+
+body {
+  padding-top: 60px;
+}
+@media (max-width: map-get($grid-breakpoints, "lg")) {
+  body {
+    padding-top: 0px;
+  }
+}
