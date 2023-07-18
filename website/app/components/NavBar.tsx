@@ -16,6 +16,10 @@ const NAV_ITEMS: NavigationItem[] = [
     name: "Experience",
     href: "#experience",
   },
+  {
+    name: "Books",
+    href: "#book",
+  },
 ];
 
 const renderNavItems = (items: NavigationItem[]) =>
