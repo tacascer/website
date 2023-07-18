@@ -13,10 +13,10 @@ const About = () => {
         width={200}
         height={200}
       />
-      <h1 className="display-5 fw-bold">Hi, I&apos;m Tim</h1>
-      <div className="mx-auto">
-        <p className="lead mb-2">Developer, learner, and opinion-haver</p>
-        <p className="lead">
+      <h1 className="display-5 fw-bold ">Hi, I&apos;m Tim</h1>
+      <div className="mx-auto m-3">
+        <p className="fw-light fs-4 ">Developer, learner, and opinion-haver</p>
+        <p className="fw-light fs-4">
           I read books, build things, and test in production
         </p>
       </div>

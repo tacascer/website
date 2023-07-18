@@ -1,11 +1,12 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/custom.scss";
-import { Roboto_Flex } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import NavBar from "./components/NavBar";
 import { Analytics } from "@vercel/analytics/react";
 
-const robotoFlex = Roboto_Flex({
+const montserrat = Montserrat({
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${robotoFlex.className} container`}>
+      <body className={`${montserrat.className} container`}>
         <NavBar></NavBar>
         {children}
         <Analytics></Analytics>

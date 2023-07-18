@@ -13,7 +13,7 @@ const techs: CardProps[] = [
       altText: "The Next.js Logo",
     },
     description: `
-        Next.js is an open-source React framework used for building static and server-side rendered applications.
+        Next.js is an open-source React framework used for building static and server-side rendered web apps.
         It provides features such as static site generation, server-side rendering, automatic code splitting, and client-side routing.
     `,
     button: {
