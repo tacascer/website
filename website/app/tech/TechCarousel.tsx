@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./TechCarousel.module.scss";
 import { Carousel } from "react-bootstrap";
 import Card, { CardProps } from "@/components/Card";
 
@@ -111,7 +112,7 @@ const TechCarousel = () => {
     >
       {techs.map((tech, index) => {
         return (
-          <Carousel.Item key={index}>
+          <Carousel.Item key={index} className={styles["tech-item"]}>
             <div className="col-lg-8 mx-auto">
               <Card {...tech}></Card>
             </div>

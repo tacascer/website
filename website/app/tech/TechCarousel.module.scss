@@ -1,0 +1,16 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+@import "../node_modules/bootstrap/scss/maps";
+
+.tech-item {
+  height: 450px;
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    height: 475px;
+  }
+  @media (max-width: map-get($grid-breakpoints, "sm")) {
+    height: 550px;
+  }
+}
