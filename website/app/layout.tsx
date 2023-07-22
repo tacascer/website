@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/custom.scss";
 import { Montserrat } from "next/font/google";
-import NavBar from "./components/NavBar";
+import NavBar from "@/components/navbar/NavBar";
 import { Analytics } from "@vercel/analytics/react";
 import ScrollSpyBody from "./ScollSpy";
+import StatefulBody from "./StatefulBody";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,8 +27,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} container`}>
-        <NavBar></NavBar>
-        <ScrollSpyBody>{children}</ScrollSpyBody>
+        <StatefulBody>
+          <NavBar></NavBar>
+          <ScrollSpyBody>{children}</ScrollSpyBody>
+        </StatefulBody>
         <Analytics></Analytics>
       </body>
     </html>

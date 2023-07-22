@@ -1,6 +1,9 @@
 "use client";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { selectActive, setActive } from "./navSlice";
+import { useAppDispatch, useAppSelector } from "../hooks";
+import { DEFAULT_ACTIVE_ITEM } from "./navSlice";
 
 type NavigationItem = {
   name: string;
@@ -25,10 +28,10 @@ const NAV_ITEMS: NavigationItem[] = [
 const renderNavItems = (items: NavigationItem[]) =>
   items.map((item, index) => {
     return (
-      <Nav.Item key={index}>
+      <Nav.Item key={index} data-to-scrollspy-id={`${item.href.substring(1)}`}>
         <Nav.Link
           href={item.href}
-          eventKey={`${index}`}
+          eventKey={`${item.href.substring(1)}`}
           className="fs-4 fw-lighter"
         >
           {item.name}
@@ -38,6 +41,12 @@ const renderNavItems = (items: NavigationItem[]) =>
   });
 
 const MainNavBar = () => {
+  function updateActive(id: string | null) {
+    if (id) dispatch(setActive(id));
+  }
+  const active = useAppSelector(selectActive);
+  const dispatch = useAppDispatch();
+
   return (
     <Navbar
       id="navbar"
@@ -52,7 +61,13 @@ const MainNavBar = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
-          <Nav fill variant="underline" defaultActiveKey={0}>
+          <Nav
+            fill
+            variant="underline"
+            defaultActiveKey={DEFAULT_ACTIVE_ITEM}
+            activeKey={active}
+            onSelect={updateActive}
+          >
             {renderNavItems(NAV_ITEMS)}
           </Nav>
         </Navbar.Collapse>
