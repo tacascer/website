@@ -14,7 +14,7 @@ export type BookCardsProps = {
 
 export default function BookCards({ books }: BookCardsProps) {
   return (
-    <Row xs={1} md={2} className="g-4">
+    <Row xs={1} md={2} className="g-4 justify-content-center">
       {books.map((book: Book) => (
         <Col key={book.id}>
           <BookCard
