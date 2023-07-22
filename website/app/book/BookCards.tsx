@@ -23,6 +23,7 @@ export default function BookCards({ books }: BookCardsProps) {
             author={book.author}
             description={book.description}
             image={book.image}
+            infoLink={book.infoLink}
           />
         </Col>
       ))}

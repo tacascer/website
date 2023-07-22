@@ -27,11 +27,16 @@ function toBooks(books: any) {
     return {
       id: book.id,
       title: book.volumeInfo.title,
-      author: book.volumeInfo.authors[0],
+      author: toAuthor(book.volumeInfo.authors),
       description: book.volumeInfo.description,
       image: book.volumeInfo.imageLinks.thumbnail,
+      infoLink: book.volumeInfo.infoLink,
     };
   });
+}
+
+function toAuthor(authors: string[]) {
+  return authors.join(", ");
 }
 
 export default Book;
