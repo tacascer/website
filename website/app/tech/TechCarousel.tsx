@@ -5,6 +5,10 @@ import { Carousel } from "react-bootstrap";
 import Card, { CardProps } from "@/components/Card";
 
 const CALL_TO_ACTION = "Try It Out!";
+const TECH_BUTTON = {
+  text: CALL_TO_ACTION,
+  stretched: true,
+};
 
 const techs: CardProps[] = [
   {
@@ -18,8 +22,8 @@ const techs: CardProps[] = [
         It provides features such as static site generation, server-side rendering, automatic code splitting, and client-side routing.
     `,
     button: {
-      text: CALL_TO_ACTION,
       href: "https://nextjs.org/",
+      ...TECH_BUTTON,
     },
   },
   {
@@ -33,8 +37,8 @@ const techs: CardProps[] = [
       Along with Spring Boot, it offers all the tools and configurations required to build enterprise applications in a quick and easy way.
     `,
     button: {
-      text: CALL_TO_ACTION,
       href: "https://spring.io/",
+      ...TECH_BUTTON,
     },
   },
   {
@@ -48,8 +52,8 @@ const techs: CardProps[] = [
         It is designed to interoperate fully with Java, bringing modern language features to remove the verbosity and ceremony of Java.
     `,
     button: {
-      text: CALL_TO_ACTION,
       href: "https://kotlinlang.org/",
+      ...TECH_BUTTON,
     },
   },
   {
@@ -64,8 +68,8 @@ const techs: CardProps[] = [
         Its expressive and declarative DSL allows developers to write build scripts that are maintainable, scalable, and easy to understand.
     `,
     button: {
-      text: CALL_TO_ACTION,
       href: "https://gradle.org/",
+      ...TECH_BUTTON,
     },
   },
   {
@@ -79,8 +83,8 @@ const techs: CardProps[] = [
         It provides features such as exactly-once semantics, stateful computations, and fault tolerance.
     `,
     button: {
-      text: CALL_TO_ACTION,
       href: "https://flink.apache.org/",
+      ...TECH_BUTTON,
     },
   },
   {
@@ -94,8 +98,8 @@ const techs: CardProps[] = [
         It is horizontally scalable, fault-tolerant, and extremely fast.
     `,
     button: {
-      text: CALL_TO_ACTION,
       href: "https://kafka.apache.org/",
+      ...TECH_BUTTON,
     },
   },
 ];

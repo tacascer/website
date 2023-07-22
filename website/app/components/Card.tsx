@@ -10,7 +10,7 @@ const CardComponent = ({
   title,
   image: { image, altText, height = LOGO_HEIGHT, width = LOGO_WIDTH },
   description,
-  button: { size = "col-md-4", ...button },
+  button: { size = "col-md-4", stretched = false, ...button },
 }: CardProps) => {
   return (
     <Card className={`border-0 gap-2 pt-2`}>
@@ -40,7 +40,9 @@ const CardComponent = ({
           variant="outline-primary"
           href={button.href}
           target="_blank"
-          className={`rounded-pill d-grid mx-auto stretched-link ${size}`}
+          className={`rounded-pill d-grid mx-auto ${
+            stretched ? "stretched-link" : ""
+          } ${size}`}
         >
           {button.text}
         </Button>
@@ -77,6 +79,7 @@ type ButtonProps = {
   href: string;
   text: string;
   size?: string;
+  stretched?: boolean;
 };
 
 export default CardComponent;
