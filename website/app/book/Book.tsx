@@ -7,6 +7,7 @@ type Response = {
     items: BookDto[];
   };
 };
+
 type BookDto = {
   id: string;
   volumeInfo: {

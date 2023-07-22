@@ -3,6 +3,7 @@ import "../styles/custom.scss";
 import { Montserrat } from "next/font/google";
 import NavBar from "./components/NavBar";
 import { Analytics } from "@vercel/analytics/react";
+import ScrollSpyBody from "./ScollSpy";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -26,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.className} container`}>
         <NavBar></NavBar>
-        {children}
+        <ScrollSpyBody>{children}</ScrollSpyBody>
         <Analytics></Analytics>
       </body>
     </html>
