@@ -2,11 +2,29 @@ import Header from "@/components/Header";
 import Section from "@/components/Section";
 import BookCards from "./BookCards";
 
-async function getBooks() {
+type Response = {
+  data: {
+    items: BookDto[];
+  };
+};
+type BookDto = {
+  id: string;
+  volumeInfo: {
+    title: string;
+    authors: string[];
+    description: string;
+    imageLinks: {
+      thumbnail: string;
+    };
+    infoLink: string;
+  };
+};
+
+async function getBooks(): Promise<Response | string> {
   const res = await fetch("https://www.tacascer.dev/book/api");
 
   if (!res.ok) {
-    throw new Error("Failed to fetch books");
+    return res.statusText;
   }
 
   return res.json();
@@ -45,21 +63,34 @@ const REVIEWS: {
 const Book = async () => {
   const books = await getBooks();
 
+  let bookCards;
+  if (typeof books === "string") {
+    console.error(books);
+    bookCards = (
+      <p className="text-center col-md-6 mx-auto text-danger border-danger border-bottom p-3">
+        Something went wrong while fetching books.
+      </p>
+    );
+  } else {
+    bookCards = <BookCards books={toBooks(books.data.items)} />;
+  }
+
   return (
     <Section id="book">
       <Header>Books I &#x1F49E;</Header>
-      <BookCards books={toBooks(books)} />
+      {bookCards}
     </Section>
   );
 };
 
-function toBooks(books: any) {
-  return books.data.items.map((book: any) => {
+function toBooks(books: BookDto[]) {
+  return books.map((book: BookDto) => {
     return {
       id: book.id,
       title: book.volumeInfo.title,
       author: toAuthor(book.volumeInfo.authors),
-      description: getReview(book.volumeInfo.title),
+      description:
+        getReview(book.volumeInfo.title) || book.volumeInfo.description,
       image: book.volumeInfo.imageLinks.thumbnail,
       infoLink: book.volumeInfo.infoLink,
     };
