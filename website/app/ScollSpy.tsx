@@ -12,6 +12,7 @@ export default function ScrollSpyBody({ children }: ScrollSpyBodyProps) {
   return (
     <ScrollSpy
       scrollThrottle={50}
+      offsetBottom={100}
       onUpdateCallback={(id) => dispatch(setActive(id))}
     >
       {children}
