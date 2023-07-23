@@ -17,10 +17,12 @@ export const metadata = {
   title: "Tim's Corner",
   description:
     "Tim Tran (@tacascer) is a software engineer based in NYC. He is passionate about building software that is scalable, maintainable, and easy to use. This is his corner of the internet.",
-  authors: {
-    name: "Tim Tran",
-    alias: "tacascer",
-  },
+  authors: [
+    {
+      name: "Tim Tran",
+      alias: "tacascer",
+    },
+  ],
 };
 
 export default function RootLayout({
