@@ -32,9 +32,18 @@ export default function Footer() {
       <div className="container">
         <Row className="justify-content-between align-items-center py-2">
           <Col md={4}>
-            <p className="mb-0">Made with ☕ by @tacascer</p>
+            <p className="mb-0">
+              Made with ☕ by{" "}
+              <a
+                href="https://github.com/tacascer"
+                target="blank"
+                className="link-primary link-offset-2 link-offset-3-hover link-underline-opacity-0 link-underline link-underline-opacity-75-hover"
+              >
+                @tacascer
+              </a>
+            </p>
           </Col>
-          <Col md={4} className="mb-0" as="address">
+          <Col md={4} className="mb-0 d-none d-md-grid" as="address">
             <Row className="justify-content-end gx-2">
               {CONTACT_INFO.map((contactInfo, index) => (
                 <Col key={index} className="col-md-auto">
