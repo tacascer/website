@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^9.1.0",
-    "sass": "^1.72.0"
+    "sass": "^1.75.0"
   }
 }
