@@ -4,5 +4,5 @@ import eslintConfigPrettier from "eslint-config-prettier";
 export default [
   eslint.configs.recommended,
   eslintConfigPrettier,
-  {files: ["**/*.ts"]}
+  {files: ["**/*.ts", "**/*.tsx"]}
 ]
