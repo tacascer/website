@@ -30,7 +30,7 @@
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "markdown-toc": "^1.2.0",
-    "markdownlint-cli2": "^0.16.0",
+    "markdownlint-cli2": "^0.17.0",
     "prettier": "^3.4.2",
     "sass": "^1.83.0",
     "typescript": "^5.7.2",
